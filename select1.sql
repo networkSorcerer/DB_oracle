@@ -15,79 +15,79 @@ DESC DEPARTMENTS;
 SELECT*FROM DEPARTMENTS;
 --DEPARTMENTS
 SELECT*FROM DEPARTMENTS;
---EMPLOYEES Å×ÀÌºíÀÇ ¸ðµç ³»¿ë Ãâ·Â
---DEPARTMENTS Å×ÀÌºí¿¡¼­ ºÎ¼­ ¹øÈ£¿Í ºÎ¼­¸í¸¸ Ãâ·Â
+--EMPLOYEES í…Œì´ë¸”ì˜ ëª¨ë“  ë‚´ìš© ì¶œë ¥
+--DEPARTMENTS í…Œì´ë¸”ì—ì„œ ë¶€ì„œ ë²ˆí˜¸ì™€ ë¶€ì„œëª…ë§Œ ì¶œë ¥
 SELECT DEPARTMENT_ID, DEPARTMENT_NAME
 FROM DEPARTMENTS;
---AS·Î ÄÃ·³¿¡ º°Äª ºÎ¿©ÇÏ±â : Ä®·³À» ±â¼úÇÑ ¹Ù·Î µÚ¿¡ AS¶ó´Â Å°¿öµå¸¦ ¾´ ÈÄ º°ÄªÀ» ±â¼ú
+--ASë¡œ ì»¬ëŸ¼ì— ë³„ì¹­ ë¶€ì—¬í•˜ê¸° : ì¹¼ëŸ¼ì„ ê¸°ìˆ í•œ ë°”ë¡œ ë’¤ì— ASë¼ëŠ” í‚¤ì›Œë“œë¥¼ ì“´ í›„ ë³„ì¹­ì„ ê¸°ìˆ 
 
 SELECT DEPARTMENT_ID AS DepartmentNo, DEPARTMENT_NAME AS DepartmentName
 FROM DEPARTMENTS;
 
---AS ¾øÀÌ ÄÃ·³¿¡ º°Äª ºÎ¿©ÇÏ±â
+--AS ì—†ì´ ì»¬ëŸ¼ì— ë³„ì¹­ ë¶€ì—¬í•˜ê¸°
 SELECT DEPARTMENT_ID "Department No", DEPARTMENT_NAME "Department Name"
 FROM DEPARTMENTS;
 
---  º°ÄªÀ¸·Î ÇÑ±Û »ç¿ëÀÌ °¡´ÉÇÏ´Ù
-SELECT DEPARTMENT_ID ºÎ¼­¹øÈ£, DEPARTMENT_NAME ºÎ¼­¸í
+--  ë³„ì¹­ìœ¼ë¡œ í•œê¸€ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤
+SELECT DEPARTMENT_ID ë¶€ì„œë²ˆí˜¸, DEPARTMENT_NAME ë¶€ì„œëª…
 FROM DEPARTMENTS;
---CONCATENATION ¿¬»êÀÚÀÇ Á¤ÀÇ¿Í »ç¿ë(¿¬°á ¿¬»êÀÚ)
---¿©·¯ ÄÃ·³À» ÇÏ³ªÀÇ ¹®ÀÚ¿­·Î Ãâ·ÂÇÏ±â
-SELECT FIRST_NAME ||'ÀÇ Á÷±ÞÀº'||JOB_ID||'ÀÔ´Ï´Ù'ASÁ÷±Þ
+--CONCATENATION ì—°ì‚°ìžì˜ ì •ì˜ì™€ ì‚¬ìš©(ì—°ê²° ì—°ì‚°ìž)
+--ì—¬ëŸ¬ ì»¬ëŸ¼ì„ í•˜ë‚˜ì˜ ë¬¸ìžì—´ë¡œ ì¶œë ¥í•˜ê¸°
+SELECT FIRST_NAME ||'ì˜ ì§ê¸‰ì€'||JOB_ID||'ìž…ë‹ˆë‹¤'ASì§ê¸‰
 FROM EMPLOYEES;
 
---Áßº¹µÈ µ¥ÀÌÅÍ¸¦ ÇÑ¹ø¾¿¸¸ Ãâ·ÂÇÏ°Ô ÇÏ´Â DISTINCT
+--ì¤‘ë³µëœ ë°ì´í„°ë¥¼ í•œë²ˆì”©ë§Œ ì¶œë ¥í•˜ê²Œ í•˜ëŠ” DISTINCT
 SELECT JOB_ID FROM EMPLOYEES;
---ÀüÃ¼ Á÷¿øÀ» ´ë»ó
+--ì „ì²´ ì§ì›ì„ ëŒ€ìƒ
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM EMPLOYEES;
 
---±Þ¿©¸¦ 3000ÀÌ»ó ¹Þ´Â Á÷¿øÀ» ´ë»ó 
+--ê¸‰ì—¬ë¥¼ 3000ì´ìƒ ë°›ëŠ” ì§ì›ì„ ëŒ€ìƒ 
 SELECT EMPLOYEE_ID, FIRST_NAME , SALARY
 FROM EMPLOYEES
 WHERE SALARY>= 3000;
 
---±Þ¿©¸¦ 3000¹Ì¸¸ ¹Þ´Â Á÷¿øÀ» ´ë»ó
+--ê¸‰ì—¬ë¥¼ 3000ë¯¸ë§Œ ë°›ëŠ” ì§ì›ì„ ëŒ€ìƒ
 
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE SALARY <3000
---ºÎ¼­¹øÈ£°¡ 110¹øÀÎ Á÷¿ø¿¡ °üÇÑ ¸ðµç Á¤º¸¸¸ Ãâ·ÂÇÏ¶ó
+--ë¶€ì„œë²ˆí˜¸ê°€ 110ë²ˆì¸ ì§ì›ì— ê´€í•œ ëª¨ë“  ì •ë³´ë§Œ ì¶œë ¥í•˜ë¼
 
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 WHERE DEPARTMENT_ID = 110;
 
---±Þ¿©°¡ 5000¹Ì¸¸ÀÌ µÇ´Â Á÷¿øÀÇ Á¤º¸Áß¿¡¼­ »ç¹ø°ú ÀÌ¸§, ±Þ¿©¸¦ Ãâ·ÂÇÏ¶ó
+--ê¸‰ì—¬ê°€ 5000ë¯¸ë§Œì´ ë˜ëŠ” ì§ì›ì˜ ì •ë³´ì¤‘ì—ì„œ ì‚¬ë²ˆê³¼ ì´ë¦„, ê¸‰ì—¬ë¥¼ ì¶œë ¥í•˜ë¼
 
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY
 FROM EMPLOYEES
 WHERE FIRST_NAME = 'Lex';
 
--- 2008³â ÀÌÈÄ¿¡ ÀÔ»çÇÑ Á÷¿ø
+-- 2008ë…„ ì´í›„ì— ìž…ì‚¬í•œ ì§ì›
 SELECT FIRST_NAME, HIRE_DATE
 FROM EMPLOYEES
 WHERE HIRE_DATE >= '2008/01/01';
 
---³í¸® ¿¬»êÀÚ ¿©·¯ Á¶°ÇÀ» ¸ðµÎ ¸¸Á·ÇØ¾ß ÇÒ °æ¿ì AND¿¬»êÀÚ¸¦ »ç¿ëÇÑ´Ù
---ºÎ¼­¹øÈ£°¡ 100¹øÀÌ°í Á÷±ÞÀÌ FI_MGRÀÎ Á÷¿ø
+--ë…¼ë¦¬ ì—°ì‚°ìž ì—¬ëŸ¬ ì¡°ê±´ì„ ëª¨ë‘ ë§Œì¡±í•´ì•¼ í•  ê²½ìš° ANDì—°ì‚°ìžë¥¼ ì‚¬ìš©í•œë‹¤
+--ë¶€ì„œë²ˆí˜¸ê°€ 100ë²ˆì´ê³  ì§ê¸‰ì´ FI_MGRì¸ ì§ì›
 
 SELECT EMPLOYEE_ID, FIRST_NAME, PHONE_NUMBER, DEPARTMENT_ID,
 JOB_ID FROM EMPLOYEES
 WHERE DEPARTMENT_ID = 100 AND JOB_ID = 'FI_MGR';
 
---±Þ¿©°¡ 5000¿¡¼­ 10000ÀÌÇÏ Á÷¿ø Á¤º¸ Ãâ·Â
+--ê¸‰ì—¬ê°€ 5000ì—ì„œ 10000ì´í•˜ ì§ì› ì •ë³´ ì¶œë ¥
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 WHERE SALARY >= 5000 AND SALARY <= 10000
--- OR ¿¬»êÀÚ
--- ºÎ¼­ ¹øÈ£°¡ 100¹øÀÌ°Å³ª Á÷±ÞÀÌ FI_MGRÀÎ Á÷¿ø
+-- OR ì—°ì‚°ìž
+-- ë¶€ì„œ ë²ˆí˜¸ê°€ 100ë²ˆì´ê±°ë‚˜ ì§ê¸‰ì´ FI_MGRì¸ ì§ì›
 
 SELECT EMPLOYEE_ID, FIRST_NAME, PHONE_NUMBER, DEPARTMENT_ID, JOB_ID
 FROM EMPLOYEES
 WHERE DEPARTMENT_ID =100 OR JOB_ID = 'FI_MGR';
 
---»ç¿ø¹øÈ£°¡ 134ÀÌ°Å³ª 201ÀÌ°Å³ª 107ÀÎ Á÷¿ø Á¤º¸ Ãâ·Â
+--ì‚¬ì›ë²ˆí˜¸ê°€ 134ì´ê±°ë‚˜ 201ì´ê±°ë‚˜ 107ì¸ ì§ì› ì •ë³´ ì¶œë ¥
 SELECT DEPARTMENT_ID 
 FROM EMPLOYEES
 
@@ -95,13 +95,13 @@ SELECT EMPLOYEE_ID
 FROM EMPLOYEES
 WHERE DEPARTMENT_ID
 
---ºÎ¼­¹øÈ£°¡ 100¹øÀÌ ¾Æ´Ñ Á÷¿ø
+--ë¶€ì„œë²ˆí˜¸ê°€ 100ë²ˆì´ ì•„ë‹Œ ì§ì›
 
 SELECT EMPLOYEE_ID, FIRST_NAME, PHONE_NUMBER, DEPARTMENT_ID, JOB_ID
 FROM EMPLOYEES
 WHERE NOT DEPARTMENT_ID IN(100);
 
---±Þ¿©°¡ 2000¿¡¼­ºÎÅÍ 3000±îÁöÀÇ ¹üÀ§¿¡ ¼ÓÇÑ »ç¿ø
+--ê¸‰ì—¬ê°€ 2000ì—ì„œë¶€í„° 3000ê¹Œì§€ì˜ ë²”ìœ„ì— ì†í•œ ì‚¬ì›
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE SALARY BETWEEN 2000 AND 3000;
@@ -110,7 +110,7 @@ SELECT EMPLOYEE_ID , FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE SALARY BETWEEN 2500 AND 4500
 
---Á÷¿ø¹øÈ£°¡ 177 ÀÌ°Å³ª 101 ÀÌ°Å³ª 184 ÀÎ »ç¿ø
+--ì§ì›ë²ˆí˜¸ê°€ 177 ì´ê±°ë‚˜ 101 ì´ê±°ë‚˜ 184 ì¸ ì‚¬ì›
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE EMPLOYEE_ID=177 OR EMPLOYEE_ID=101 OR EMPLOYEE_ID=184;
@@ -119,71 +119,71 @@ SELECT EMPLOYEE_ID , FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE EMPLOYEE_ID IN(177, 101, 184);
 
---ºÎ¼­¹øÈ£°¡ 10, 20,30 Áß ÇÏ³ª¿¡ ¼Ò¼ÓµÈ Á÷¿øÀÇ Á÷¿ø ¹øÈ£,ÀÌ¸§ ±Þ¿©¸¦ Ãâ·ÂÇÏ¶ó
+--ë¶€ì„œë²ˆí˜¸ê°€ 10, 20,30 ì¤‘ í•˜ë‚˜ì— ì†Œì†ëœ ì§ì›ì˜ ì§ì› ë²ˆí˜¸,ì´ë¦„ ê¸‰ì—¬ë¥¼ ì¶œë ¥í•˜ë¼
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM EMPLOYEES
 WHERE DEPARTMENT_ID IN ( 10, 20, 30);
 
---¿ÍÀÏµåÄ«µå(%) »ç¿ëÇÏ±â
---%´Â °Ë»öÇÏ°íÀÚ ÇÏ´Â °ªÀ» Á¤È®È÷ ¸ð¸¦ °æ¿ì »ç¿ëÇÑ´Ù %´Â ¸î°³ÀÇ ¹®ÀÚ°¡ ¿Àµç »ó°ü¾ø´Ù´ÂÀÇ¹Ì
---K·Î ½ÃÀÛÇÏ´Â»ç¿ø
+--ì™€ì¼ë“œì¹´ë“œ(%) ì‚¬ìš©í•˜ê¸°
+--%ëŠ” ê²€ìƒ‰í•˜ê³ ìž í•˜ëŠ” ê°’ì„ ì •í™•ížˆ ëª¨ë¥¼ ê²½ìš° ì‚¬ìš©í•œë‹¤ %ëŠ” ëª‡ê°œì˜ ë¬¸ìžê°€ ì˜¤ë“  ìƒê´€ì—†ë‹¤ëŠ”ì˜ë¯¸
+--Kë¡œ ì‹œìž‘í•˜ëŠ”ì‚¬ì›
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 WHERE FIRST_NAME LIKE'K%';
---K¸¦ Æ÷ÇÔÇÏ´Â »ç¿ø
+--Kë¥¼ í¬í•¨í•˜ëŠ” ì‚¬ì›
 SELECT EMPLOYEE_ID , FIRST_NAME
 FROM EMPLOYEES
 WHERE LOWER(FIRST_NAME)LIKE'%k%';
 
---ÀÌ¸§ÀÌ K·Î ³¡³ª´Â »ç¿ø
+--ì´ë¦„ì´ Kë¡œ ëë‚˜ëŠ” ì‚¬ì›
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 WHERE FIRST_NAME LIKE'%k';
 
---¿ÍÀÏµåÄ«µå(_) »ç¿ëÇÏ±â
---  -´Â ÇÑ¹®ÀÚ¸¦ ´ë½ÅÇØ¼­ »ç¿ëÇÑ°Í
+--ì™€ì¼ë“œì¹´ë“œ(_) ì‚¬ìš©í•˜ê¸°
+--  -ëŠ” í•œë¬¸ìžë¥¼ ëŒ€ì‹ í•´ì„œ ì‚¬ìš©í•œê²ƒ
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 WHERE FIRST_NAME LIKE '_d%';
 
---NULLÀ»À§ÇÑ ¿¬»êÀÚ
---¿À¶óÅ¬¿¡¼­´Â Ä®·³¿¡ NULL°ªÀÌ ÀúÀåµÇ´Â °ÍÀ» Çã¿ëÇÑ´Ù
---NULLÀº ¹ÌÈ®Á¤, ¾Ë ¼ö¾ø´Â (UNKNOWN)°ªÀ» ÀÇ¹ÌÇÑ´Ù. 0(ZERO)µµ ºó°ø°£µµ ¾Æ´Ñ ¾î¶² °ªÀÌ
---Á¸ÀçÇÏ±â´Â ÇÏÁö¸¸ ¾î¶² °ªÀÎÁö¸¦ ¾Ë¾Æ³¾¼ö¾ø´Â °ÍÀ» ÀÇ¹ÌÇÑ´Ù
---NULLÀº ¿¬»ê, ÇÒ´ç, ºñ±³°¡ ºÒ°¡´ÉÇÏ´Ù
+--NULLì„ìœ„í•œ ì—°ì‚°ìž
+--ì˜¤ë¼í´ì—ì„œëŠ” ì¹¼ëŸ¼ì— NULLê°’ì´ ì €ìž¥ë˜ëŠ” ê²ƒì„ í—ˆìš©í•œë‹¤
+--NULLì€ ë¯¸í™•ì •, ì•Œ ìˆ˜ì—†ëŠ” (UNKNOWN)ê°’ì„ ì˜ë¯¸í•œë‹¤. 0(ZERO)ë„ ë¹ˆê³µê°„ë„ ì•„ë‹Œ ì–´ë–¤ ê°’ì´
+--ì¡´ìž¬í•˜ê¸°ëŠ” í•˜ì§€ë§Œ ì–´ë–¤ ê°’ì¸ì§€ë¥¼ ì•Œì•„ë‚¼ìˆ˜ì—†ëŠ” ê²ƒì„ ì˜ë¯¸í•œë‹¤
+--NULLì€ ì—°ì‚°, í• ë‹¹, ë¹„êµê°€ ë¶ˆê°€ëŠ¥í•˜ë‹¤
 
---Ä¿¹Ì¼ÇÀ» ¹ÞÁö ¾Ê´Â »ç¿ø¿¡ ´ëÇÑ °Ë»ö
+--ì»¤ë¯¸ì…˜ì„ ë°›ì§€ ì•ŠëŠ” ì‚¬ì›ì— ëŒ€í•œ ê²€ìƒ‰
 SELECT EMPLOYEE_ID , FIRST_NAME, COMMISSION_PCT, JOB_ID
 FROM EMPLOYEES
 WHERE COMMISSION_PCT=NULL;
 
--- IS NULL , IS NOT NULL ·Î Ç¥Çö = ÀÌ³ª !=À» »ç¿ëÇÏÁö ¾Ê´Â´Ù
+-- IS NULL , IS NOT NULL ë¡œ í‘œí˜„ = ì´ë‚˜ !=ì„ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤
 
---Ä¿¹Ì¼ÇÀ» ¹ÞÁö ¾Ê´Â »ç¿ø
+--ì»¤ë¯¸ì…˜ì„ ë°›ì§€ ì•ŠëŠ” ì‚¬ì›
 SELECT EMPLOYEE_ID , FIRST_NAME, COMMISSION_PCT, JOB_ID
 FROM EMPLOYEES
 WHERE COMMISSION_PCT IS NULL;
 
---Ä¿¹Ì¼ÇÀ» ¹Þ´Â »ç¿ø
+--ì»¤ë¯¸ì…˜ì„ ë°›ëŠ” ì‚¬ì›
 SELECT EMPLOYEE_ID, FIRST_NAME, COMMISSION_PCT, JOB_ID
 FROM EMPLOYEES
 WHERE COMMISSION_PCT IS NOT NULL;
 
---ÀÚ½ÅÀÇ Á÷¼Ó »ó°üÀÌ ¾ø´Â Á÷¿øÀÇ ÀüÃ¼ ÀÌ¸§°ú Á÷¿ø ¹øÈ£ ¾÷¹« ID¸¦ Ãâ·ÂÇÏ¶ó
+--ìžì‹ ì˜ ì§ì† ìƒê´€ì´ ì—†ëŠ” ì§ì›ì˜ ì „ì²´ ì´ë¦„ê³¼ ì§ì› ë²ˆí˜¸ ì—…ë¬´ IDë¥¼ ì¶œë ¥í•˜ë¼
 
 SELECT EMPLOYEE_ID, FIRST_NAME, JOB_ID
 FROM EMPLOYEES
 WHERE MANAGER_ID IS NULL;
 
---ASC ¿À¸§Â÷¼ø DESC ³»¸²Â÷¼ø
+--ASC ì˜¤ë¦„ì°¨ìˆœ DESC ë‚´ë¦¼ì°¨ìˆœ
 
---»ç¹øÀ» ±âÁØÀ¸·Î ¿À¸§ Â÷¼øÀ¸·Î Á¤·Ä
+--ì‚¬ë²ˆì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 SELECT EMPLOYEE_ID , FIRST_NAME
 FROM EMPLOYEES
 ORDER BY EMPLOYEE_ID ASC;
 
--- ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÀ» À§ÇÑ DESC
--- »ç¿ø¹øÈ£¸¦ ±âÁØÀ¸·Î ³»¸²Â÷¼øÀ¸·Î Á¤·Ä
+-- ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ì„ ìœ„í•œ DESC
+-- ì‚¬ì›ë²ˆí˜¸ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 SELECT EMPLOYEE_ID, FIRST_NAME
 FROM EMPLOYEES
 ORDER BY EMPLOYEE_ID DESC;
