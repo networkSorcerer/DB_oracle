@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-26T05:52:15.970Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="gQGc8JCGgb5e_lrMbxoW" version="23.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-26T06:48:06.378Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="ukEBKyOzadQvvbgEfbwt" version="23.0.1" type="github">
   <diagram name="페이지-1" id="Xxatd9Inokkaz-k3zDd7">
-    <mxGraphModel dx="2874" dy="3546" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1987" dy="3537" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3436,34 +3436,34 @@
           <mxGeometry x="216" y="-2008" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-23" value="고유 대여 번호" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="96" y="-1904" width="120" height="80" as="geometry" />
+          <mxGeometry x="644" y="-1877" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-24" value="&lt;font color=&quot;#150dff&quot;&gt;캠핑카 등록 ID&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="216" y="-1904" width="120" height="80" as="geometry" />
+          <mxGeometry x="649" y="-2040" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-25" value="&lt;font color=&quot;#ff21da&quot;&gt;운전면허증번호&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="336" y="-1904" width="120" height="80" as="geometry" />
+          <mxGeometry x="775" y="-1946" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-26" value="&lt;font color=&quot;#ff0808&quot;&gt;캠핑카대여회사 ID&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="457" y="-1906" width="120" height="80" as="geometry" />
+          <mxGeometry x="663" y="-1954" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-27" value="대여시작일" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="95" y="-1826" width="120" height="80" as="geometry" />
+          <mxGeometry x="649" y="-1783" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-28" value="대여기간" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="215" y="-1821" width="120" height="80" as="geometry" />
+          <mxGeometry x="655" y="-1703" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-29" value="청구요금" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="337" y="-1821" width="120" height="80" as="geometry" />
+          <mxGeometry x="764" y="-1874" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-30" value="납입기한" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="462" y="-1824" width="120" height="80" as="geometry" />
+          <mxGeometry x="769" y="-1703" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-31" value="기타청구내역" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="99" y="-1744" width="120" height="80" as="geometry" />
+          <mxGeometry x="669" y="-1626" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-32" value="기타청구요금 정보" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="219" y="-1746" width="120" height="80" as="geometry" />
+          <mxGeometry x="740" y="-1786" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-34" value="&lt;font color=&quot;#2fff0f&quot;&gt;캠핑카정비소ID&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="102" y="-1662" width="120" height="80" as="geometry" />
@@ -3509,6 +3509,12 @@
         </mxCell>
         <mxCell id="MAROPhipzJveXodlv8xf-50" value="기타 정비 내역 정보" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="363" y="-1319" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MAROPhipzJveXodlv8xf-51" value="대여" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="617" y="-1870" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MAROPhipzJveXodlv8xf-54" value="&lt;font color=&quot;#ff21da&quot;&gt;운전면허증번호&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="88" y="-1893" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
