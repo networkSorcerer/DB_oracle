@@ -83,7 +83,7 @@ select
     from spring_board
     where rownum <= 20
     ) boardlist
-    where rnum > 10;
+    where rnum > 10; --페이지 번호
     
 --이 과정을 정리하면 다음과 같은 순서이다
 --필요한 순서로 정렬된 데이터에 rownum을 붙인다
