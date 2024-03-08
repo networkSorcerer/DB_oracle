@@ -46,40 +46,15 @@ DROP COLUMN animal_temp;
 ALTER TABLE animal
 RENAME COLUMN animal_temp_new TO animal_temp;
 
+SELECT ad.adoption_id, ad.adoption_title, ad.adoption_status, a.animal_id, a.animal_name
+		FROM adoption ad JOIN animal a on a.animal_id = ad.animal_id
+		ORDER BY ad.adoption_id DESC;
 
-CREATE TABLE adoption (
-	adoption_id	number		NOT NULL,
-	adoption_content	varchar2(2000)		NOT NULL,
-	adoption_date	date	DEFAULT sysdate	NOT NULL,
-	adoption_title	varchar2(100)		NOT NULL,
-	adoption_cnt	number	DEFAULT 0	NOT NULL,
-	adoption_status	varchar2(20)	DEFAULT '공고중'	NOT NULL,
-	adoption_level	varchar2(20)		NOT NULL,
-	admin_id	varchar2(20)		NOT NULL,
-	animal_id	number		NOT NULL
-);
 
-COMMENT ON COLUMN adoption.adoption_level IS '입양 공고의 동물마다 레벨 제한이 달라짐';
-
-COMMENT ON COLUMN adoption.admin_id IS '관리자는 한 명으로 가정하였습니다.';
-
-CREATE TABLE animal (
-	animal_id	number		NOT NULL,
-	animal_species	varchar2(50)		NOT NULL,
-	animal_age	varchar2(50)		NOT NULL,
-	animal_gender	varchar2(50)		NOT NULL,
-	animal_status	varchar2(50)		NOT NULL,
-	animal_kg	varchar2(50)		NOT NULL,
-	animal_color	varchar2(50)		NOT NULL,
-	animal_memo	varchar2(2000)		NOT NULL,
-	admin_id	varchar2(20)		NOT NULL,
-	animal_temp	number	DEFAULT 0	NOT NULL,
-	animal_regist	date	DEFAULT sysdate	NOT NULL,
-	animal_name	varchar2(50)		NOT NULL
-);
-
-COMMENT ON COLUMN animal.animal_species IS '강아지 또는 고양이';
-
-COMMENT ON COLUMN animal.admin_id IS '관리자는 한 명으로 가정하였습니다.';
-
-COMMENT ON COLUMN animal.animal_temp IS '0 : 불가능 1 : 호스피스 2 : 장기체류 3: 심장사상충';
+SELECT ad.adoption_id, ad.adoption_title, ad.adoption_status, a.animal_id, a.animal_name, ad.adoption_date, ad.adoption_cnt
+		FROM adoption ad JOIN animal a on a.animal_id = ad.animal_id
+		ORDER BY ad.adoption_id DESC;
+        
+        
+        
+        
