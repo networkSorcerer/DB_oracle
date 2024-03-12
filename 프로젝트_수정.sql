@@ -103,6 +103,18 @@ ad.adoption_id, ad.adoption_title,ad.adoption_level,ad.adoption_status,ad.adopti
 ad.adoption_cnt,ad.adoption_file,ad.adoption_thumb
 from animal an  join adoption ad  on an.animal_id = ad.animal_id;
 
+	SELECT
+    an.animal_id, an.animal_name, an.animal_species, an.animal_gender, an.animal_kg, an.animal_age,
+    an.animal_color, an.animal_status, an.animal_memo, an.animal_temp,
+    ad.adoption_id, ad.adoption_title, ad.adoption_level, ad.adoption_status, ad.adoption_date,
+    ad.adoption_cnt, ad.adoption_file, ad.adoption_thumb
+FROM
+    animal an
+INNER JOIN
+    adoption ad ON an.animal_id = ad.animal_id
+    where an.animal_id=ad.animal_id;
+    
+    
 select * from animal;
 select * from adoption;
  
@@ -116,7 +128,39 @@ alter table adoption
 add(adoption_passwd number default 0);
 
 alter table adoption
-add(admin_id number default 0);
+add(animal_id number );
 
 INSERT INTO adoption (adoption_id, adoption_title, adoption_level, adoption_status, adoption_content, adoption_passwd)
 VALUES (adoption_seq.nextval, '공고', '상', '공고 중', '입양 강추', '1234');
+
+
+UPDATE adoption
+SET animal_id = 1
+WHERE adoption_id = 1;
+UPDATE adoption
+SET animal_id = 2
+WHERE adoption_id = 2;
+UPDATE adoption
+SET animal_id = 3
+WHERE adoption_id = 3;
+UPDATE adoption
+SET animal_id = 4
+WHERE adoption_id = 4;
+UPDATE adoption
+SET animal_id = 5
+WHERE adoption_id = 5;
+UPDATE adoption
+SET animal_id = 6
+WHERE adoption_id = 6;
+UPDATE adoption
+SET animal_id = 7
+WHERE adoption_id = 7;
+UPDATE adoption
+SET animal_id = 8
+WHERE adoption_id = 8;
+UPDATE adoption
+SET animal_id = 9
+WHERE adoption_id = 9;
+UPDATE adoption
+SET animal_id = 10
+WHERE adoption_id = 10;

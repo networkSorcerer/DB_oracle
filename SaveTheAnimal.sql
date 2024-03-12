@@ -1357,7 +1357,7 @@ select * from volunteer;
 select * from volunteerfeedbackboard;
 
 
-
+--
 --drop table"USERS"cascade constraints;
 --drop table"ADMIN"cascade constraints;
 --drop table"VOLUNTEER"cascade constraints;
@@ -1380,10 +1380,10 @@ select * from volunteerfeedbackboard;
 --drop table"AFLIKE"cascade constraints;
 --drop table"REPORT"cascade constraints;
 --drop table"SANCTION"cascade constraints;
-
-
+--
+--
 --select 'drop sequence"' || sequence_name || '";' from user_sequences;
-
+--
 --drop sequence"ADOPTIONFEEDBACKBOARD_SEQ";
 --drop sequence"ADOPTION_SEQ";
 --drop sequence"AFCOMMENT_SEQ";
