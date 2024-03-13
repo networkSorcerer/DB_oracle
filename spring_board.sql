@@ -77,3 +77,5 @@ select a_id, a_name, a_email
 from spring_admin
 where a_id = 'javaadmin' and a_pwd = 'java1234';
 
+describe spring_board;
+describe board_reply;
