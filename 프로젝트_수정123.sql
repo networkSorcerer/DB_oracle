@@ -17,7 +17,7 @@ add(animal_file varchar2(500));
 alter table animal
 add(animal_thumb varchar2(500));
 
--- 1. 테이블 구조 변경 (새로운 컬럼 추가)
+-- 1. 테이블 구조 변경 (새로운 컬럼 추가) --animal_temp를 select 로 변경했습니다
 ALTER TABLE animal
 ADD (animal_temp_new VARCHAR2(100));
 
@@ -33,36 +33,60 @@ DROP COLUMN animal_temp;
 ALTER TABLE animal
 RENAME COLUMN animal_temp_new TO animal_temp;
 
+
+
 --animal을 지우면 image 지우기
---ALTER TABLE image
---ADD CONSTRAINT FK_animal_TO_image_1
---FOREIGN KEY (animal_id)
---REFERENCES adoption(animal_id)
---ON DELETE CASCADE;
+ALTER TABLE image
+ADD CONSTRAINT FK_animal_TO_image_1
+FOREIGN KEY (animal_id)
+REFERENCES animal(animal_id)
+ON DELETE CASCADE;
 
 --adoption 지우면 image 지우기
---ALTER TABLE image
---ADD CONSTRAINT FK_adoption_TO_image_1
---FOREIGN KEY (adoption_id)
---REFERENCES adoption(adoption_id)
---ON DELETE CASCADE;
+ALTER TABLE image
+ADD CONSTRAINT FK_adoption_TO_image_1
+FOREIGN KEY (adoption_id)
+REFERENCES adoption(adoption_id)
+ON DELETE CASCADE;
 
 --adoption 지우면 counseling 지우기
---ALTER TABLE counseling
---ADD CONSTRAINT FK_adoption_TO_counseling_1
---FOREIGN KEY (adoption_id)
---REFERENCES adoption(adoption_id)
---ON DELETE CASCADE;
+ALTER TABLE counseling
+ADD CONSTRAINT FK_adoption_TO_counseling_1
+FOREIGN KEY (adoption_id)
+REFERENCES adoption(adoption_id)
+ON DELETE CASCADE;
 
 --animal 지우면 adoption 지우기 
---ALTER TABLE adoption
---ADD CONSTRAINT FK_animal_TO_adoption_1
---FOREIGN KEY (animal_id)
---REFERENCES animal(animal_id)
---ON DELETE CASCADE;
+ALTER TABLE adoption
+ADD CONSTRAINT FK_animal_TO_adoption_1
+FOREIGN KEY (animal_id)
+REFERENCES animal(animal_id)
+ON DELETE CASCADE;
 
+ALTER TABLE survey
+ADD CONSTRAINT FK_COUNSELING_TO_SURVEY_1
+FOREIGN KEY (counseling_id)
+REFERENCES counseling(counseling_id)
+ON DELETE CASCADE;
 
+-- 이미지 테이블의 animal_id 외래 키 제약 조건 삭제
+ALTER TABLE image
+DROP CONSTRAINT FK_animal_TO_image_1;
 
+-- 이미지 테이블의 adoption_id 외래 키 제약 조건 삭제
+ALTER TABLE image
+DROP  CONSTRAINT FK_adoption_TO_image_1;
+
+-- 상담 테이블의 adoption_id 외래 키 제약 조건 삭제
+ALTER TABLE counseling
+DROP CONSTRAINT FK_adoption_TO_counseling_1;
+
+-- 입양 테이블의 animal_id 외래 키 제약 조건 삭제
+ALTER TABLE adoption
+DROP CONSTRAINT FK_animal_TO_adoption_1;
+
+ALTER TABLE survey
+DROP CONSTRAINT FK_COUNSELING_TO_SURVEY_1;
 
 --FK_animal_TO_adoption_1
 --FK_adoption_TO_image_1
@@ -92,9 +116,9 @@ add(adoption_thumb varchar2(500));
 
 
 
---img 파일 문제 해결 
---UPDATE animal
---SET animal_file = NULL;
+
+UPDATE animal
+SET animal_file = NULL;
 
 
 
@@ -110,5 +134,9 @@ select * from adoption;
 select * from admin;
 select * from image;
 
+ALTER TABLE application DROP CONSTRAINT FK_volunteer_TO_application_1;
 
+ALTER TABLE application ADD CONSTRAINT FK_volunteer_TO_application_1 FOREIGN KEY (volunteer_id)
+REFERENCES volunteer (volunteer_id)
+ON DELETE CASCADE;
 
